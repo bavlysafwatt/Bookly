@@ -1,3 +1,4 @@
+import 'package:bookly/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,7 +17,7 @@ class Bookly extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
         useMaterial3: false,
       ),
-      home: const Scaffold(),
+      home: const SplashView(),
     );
   }
 }
