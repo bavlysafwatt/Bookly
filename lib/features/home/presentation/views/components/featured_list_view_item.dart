@@ -16,7 +16,7 @@ class FeaturedListViewItem extends StatelessWidget {
               image: AssetImage('assets/images/test_image.png'),
               fit: BoxFit.fill,
             ),
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(16),
           ),
         ),
       ),
