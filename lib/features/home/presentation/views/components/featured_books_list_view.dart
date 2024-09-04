@@ -1,4 +1,4 @@
-import 'package:bookly/features/home/presentation/views/components/featured_list_view_item.dart';
+import 'package:bookly/features/home/presentation/views/components/custom_book_image.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
@@ -11,7 +11,7 @@ class FeaturedBooksListView extends StatelessWidget {
       child: ListView.builder(
         itemCount: 5,
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => const FeaturedListViewItem(),
+        itemBuilder: (context, index) => const CustomBookImage(),
       ),
     );
   }
