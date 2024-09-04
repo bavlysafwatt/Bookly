@@ -8,7 +8,7 @@ class FeaturedListViewItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 12.0),
       child: AspectRatio(
-        aspectRatio: 0.67,
+        aspectRatio: 0.63,
         child: Container(
           decoration: BoxDecoration(
             color: Colors.white,
