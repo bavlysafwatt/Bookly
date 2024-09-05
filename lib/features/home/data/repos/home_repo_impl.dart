@@ -8,23 +8,41 @@ import 'package:dio/dio.dart';
 class HomeRepoImpl implements HomeRepo {
   final ApiService apiService = ApiService(Dio());
   @override
-  Future<Either<Failure, List<BookModel>>> fetchBestSellerBooks() async {
+  Future<Either<Failure, List<BookModel>>> fetchNewestBooks() async {
     try {
       Map<String, dynamic> data = await apiService.get(
-          endPoint: 'volumes?Filtering=free-ebooks&q=code');
+          endPoint:
+              'volumes?q=programming&Filtering=free-ebooks&Sorting=newest');
       List<BookModel> booksList = [];
       for (var item in data['items']) {
         booksList.add(BookModel.fromJsonData(item));
       }
       return right(booksList);
     } on Exception catch (e) {
-      return left(ServerFailure());
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e));
+      } else {
+        return left(ServerFailure(errorMessage: e.toString()));
+      }
     }
   }
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() {
-    // TODO: implement fetchFeaturedBooks
-    throw UnimplementedError();
+  Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() async {
+    try {
+      Map<String, dynamic> data = await apiService.get(
+          endPoint: 'volumes?q=code&Filtering=free-ebooks');
+      List<BookModel> booksList = [];
+      for (var item in data['items']) {
+        booksList.add(BookModel.fromJsonData(item));
+      }
+      return right(booksList);
+    } on Exception catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e));
+      } else {
+        return left(ServerFailure(errorMessage: e.toString()));
+      }
+    }
   }
 }
