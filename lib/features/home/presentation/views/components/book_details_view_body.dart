@@ -19,7 +19,7 @@ class BookDetailsViewBody extends StatelessWidget {
             child: Column(
               children: [
                 const BookDetailsCustomAppBar(),
-                const SizedBox(height: 20),
+                const SizedBox(height: 30),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.42,
                   child: const CustomBookImage(),
@@ -59,7 +59,7 @@ class BookDetailsViewBody extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 const SimilarBooksListView(),
-                const SizedBox(height: 25),
+                const SizedBox(height: 30),
               ],
             ),
           ),
