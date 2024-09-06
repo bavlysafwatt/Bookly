@@ -4,6 +4,7 @@ import 'package:bookly/features/home/presentation/manager/featured_books_cubit/f
 import 'package:bookly/features/home/presentation/views/components/custom_book_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
   const FeaturedBooksListView({super.key});
@@ -19,9 +20,15 @@ class FeaturedBooksListView extends StatelessWidget {
               physics: const BouncingScrollPhysics(),
               itemCount: state.booksList.length,
               scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => CustomBookImage(
-                imageUrl:
-                    state.booksList[index].volumeInfo.imageLinks?.thumbnail,
+              itemBuilder: (context, index) => GestureDetector(
+                onTap: () => GoRouter.of(context).push(
+                  '/bookDetails',
+                  extra: state.booksList[index],
+                ),
+                child: CustomBookImage(
+                  imageUrl:
+                      state.booksList[index].volumeInfo.imageLinks?.thumbnail,
+                ),
               ),
             ),
           );

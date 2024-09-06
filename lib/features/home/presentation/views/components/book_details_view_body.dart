@@ -22,14 +22,14 @@ class BookDetailsViewBody extends StatelessWidget {
             child: Column(
               children: [
                 const BookDetailsCustomAppBar(),
-                const SizedBox(height: 15),
+                const SizedBox(height: 20),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.42,
                   child: CustomBookImage(
                     imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail,
                   ),
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 20),
                 Text(
                   textAlign: TextAlign.center,
                   bookModel.volumeInfo.title!,
@@ -56,7 +56,7 @@ class BookDetailsViewBody extends StatelessWidget {
                   rating: bookModel.volumeInfo.averageRating ?? 0,
                   count: bookModel.volumeInfo.ratingsCount ?? 0,
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 40),
                 const ActionsBox(),
                 const SizedBox(height: 40),
                 Align(
@@ -68,8 +68,9 @@ class BookDetailsViewBody extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 20),
                 const SimilarBooksListView(),
+                const SizedBox(height: 16),
               ],
             ),
           ),
