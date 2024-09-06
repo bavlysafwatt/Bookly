@@ -11,7 +11,10 @@ class SimilarBooksListView extends StatelessWidget {
       child: ListView.builder(
         itemCount: 5,
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => const CustomBookImage(),
+        itemBuilder: (context, index) => const CustomBookImage(
+          imageUrl:
+              'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.eg%2F-%2Fen%2FClean-Code-Handbook-Software-Craftsmanship%2Fdp%2F0132350882&psig=AOvVaw1STKnO5qgMYWMqwCmcx2U1&ust=1725705456738000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKjW3PeProgDFQAAAAAdAAAAABAE',
+        ),
       ),
     );
   }

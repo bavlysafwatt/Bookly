@@ -22,7 +22,10 @@ class BookDetailsViewBody extends StatelessWidget {
                 const SizedBox(height: 30),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.42,
-                  child: const CustomBookImage(),
+                  child: const CustomBookImage(
+                    imageUrl:
+                        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.eg%2F-%2Fen%2FClean-Code-Handbook-Software-Craftsmanship%2Fdp%2F0132350882&psig=AOvVaw1STKnO5qgMYWMqwCmcx2U1&ust=1725705456738000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKjW3PeProgDFQAAAAAdAAAAABAE',
+                  ),
                 ),
                 const SizedBox(height: 43),
                 Text(
