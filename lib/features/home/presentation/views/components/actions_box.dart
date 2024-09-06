@@ -25,7 +25,7 @@ class ActionsBox extends StatelessWidget {
           Expanded(
             child: CustomButton(
               fontSize: 16,
-              backgroungColor: Color(0xffef8262),
+              backgroungColor: Color(0xff9CA986),
               text: 'Free Preview',
               textColor: Colors.white,
               borderRadius: BorderRadius.only(

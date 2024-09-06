@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
-const kPrimaryColor = Color(0xff100b20);
+const kPrimaryColor = Color(0xff1A3636);
+const kSplashColor = Color(0xffC9DABF);
 const kTransitionDuration = Duration(milliseconds: 250);
 const kGtSectraFine = 'GT Sectra Fine';
