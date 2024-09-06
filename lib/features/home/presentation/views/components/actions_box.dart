@@ -14,7 +14,7 @@ class ActionsBox extends StatelessWidget {
           Expanded(
             child: CustomButton(
               backgroungColor: Colors.white,
-              text: '19.99\$',
+              text: 'Free',
               textColor: Colors.black,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(16),
