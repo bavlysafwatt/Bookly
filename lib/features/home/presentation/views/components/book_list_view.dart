@@ -24,7 +24,7 @@ class BookListView extends StatelessWidget {
         } else if (state is NewestBooksFailure) {
           return CustomErrorMessage(errorMessage: state.errorMessage);
         } else {
-          return const CustomLoadingIndicator();
+          return const Expanded(child: CustomLoadingIndicator());
         }
       },
     );
