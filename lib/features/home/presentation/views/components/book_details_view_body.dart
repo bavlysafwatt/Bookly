@@ -57,7 +57,9 @@ class BookDetailsViewBody extends StatelessWidget {
                   count: bookModel.volumeInfo.ratingsCount ?? 0,
                 ),
                 const SizedBox(height: 40),
-                const ActionsBox(),
+                ActionsBox(
+                  bookModel: bookModel,
+                ),
                 const SizedBox(height: 40),
                 Align(
                   alignment: Alignment.centerLeft,
