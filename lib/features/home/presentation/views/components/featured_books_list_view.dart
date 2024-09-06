@@ -14,14 +14,14 @@ class FeaturedBooksListView extends StatelessWidget {
       builder: (context, state) {
         if (state is FeaturedBooksSuccess) {
           return SizedBox(
-            height: MediaQuery.of(context).size.height * 0.28,
+            height: MediaQuery.of(context).size.height * 0.3,
             child: ListView.builder(
               physics: const BouncingScrollPhysics(),
               itemCount: state.booksList.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) => CustomBookImage(
                 imageUrl:
-                    state.booksList[index].volumeInfo.imageLinks.thumbnail,
+                    state.booksList[index].volumeInfo.imageLinks?.thumbnail,
               ),
             ),
           );
