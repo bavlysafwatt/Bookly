@@ -1,4 +1,3 @@
-import 'package:bookly/features/home/presentation/views/components/book_list_view_item.dart';
 import 'package:flutter/material.dart';
 
 class SearchResultsListView extends StatelessWidget {
@@ -9,7 +8,8 @@ class SearchResultsListView extends StatelessWidget {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
         childCount: 7,
-        (context, index) => const BookListViewItem(),
+        // (context, index) => const BookListViewItem(),
+        (context, index) => const Text(''),
       ),
     );
   }
