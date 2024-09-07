@@ -18,11 +18,11 @@ class BookDetailsViewBody extends StatelessWidget {
       slivers: [
         SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
               children: [
                 const BookDetailsCustomAppBar(),
-                const SizedBox(height: 20),
+                const SizedBox(height: 10),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.42,
                   child: CustomBookImage(
@@ -45,6 +45,7 @@ class BookDetailsViewBody extends StatelessWidget {
                             bookModel.volumeInfo.authors!.isNotEmpty
                         ? bookModel.volumeInfo.authors![0]
                         : 'Unknown Author',
+                    textAlign: TextAlign.center,
                     style: Styles.textStyle18.copyWith(
                       fontStyle: FontStyle.italic,
                     ),

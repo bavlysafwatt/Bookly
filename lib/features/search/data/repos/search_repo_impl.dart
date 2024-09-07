@@ -15,13 +15,13 @@ class SearchRepoImpl implements SearchRepo {
       {required String key}) async {
     try {
       Map<String, dynamic> data = await apiService.get(
-          endPoint: 'volumes?Filtering=free-ebooks&Sorting=relevance&q=$key');
+          endPoint: 'volumes?q=$key&Filtering=free-ebooks');
       List<BookModel> booksList = [];
       for (var item in data['items']) {
         booksList.add(BookModel.fromJsonData(item));
       }
       return right(booksList);
-    } on Exception catch (e) {
+    } catch (e) {
       if (e is DioException) {
         return left(ServerFailure.fromDioException(e));
       } else {

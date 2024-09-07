@@ -49,6 +49,8 @@ class BookListViewItem extends StatelessWidget {
                                 bookModel.volumeInfo.authors!.isNotEmpty
                             ? bookModel.volumeInfo.authors![0]
                             : 'Unknown Author',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: Styles.textStyle14.copyWith(
                           fontWeight: FontWeight.bold,
                           color: Colors.grey.shade400,
